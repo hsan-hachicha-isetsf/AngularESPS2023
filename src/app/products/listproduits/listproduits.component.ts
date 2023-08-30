@@ -14,4 +14,9 @@ ngOnInit():void{
 this.prserv.getallArticles().subscribe((data:Products[])=>
   this.produits=data)
 }
+delarticle(id:any){
+  this.prserv.deleteArticle(id).subscribe(res => {
+    this.produits = this.produits.filter(item => item._id !== id);
+})
+}
 }
