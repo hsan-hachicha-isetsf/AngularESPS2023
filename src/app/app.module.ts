@@ -10,6 +10,7 @@ import { ScategoriesModule } from './scategories/scategories.module';
 import { NavscrollComponent } from './navscroll/navscroll.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,10 +20,12 @@ import { NavscrollComponent } from './navscroll/navscroll.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     ProductsModule,
     HttpClientModule,
     CategoriesModule,
     ScategoriesModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
