@@ -14,11 +14,13 @@ export class CreateComponent {
   products:Products=new Products()
   scategories:Scategorie[]=[]
   display = "none";
+ 
 constructor(private scatserv:ScategoriesService,private prserv:ProductsService){}
 
 ngOnInit():void{
   this.scatserv.getallScategorie().subscribe((data:Scategorie[])=>
     this.scategories=data)
+    
   }
 
 

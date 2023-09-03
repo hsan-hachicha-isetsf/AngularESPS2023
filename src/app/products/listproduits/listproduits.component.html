@@ -1,6 +1,12 @@
+<div >
+    <div class="headers">
+    <h2 class="table-title">Gestion des articles</h2>
+    
+   
 
 <app-create></app-create>
-<table class="table table-striped">
+<div>
+    <table datatable *ngIf="produits.length !=0"   class="table table-striped table-bordered table-sm row-border hover">
     <thead>
         <tr>
             <th>Image</th>
@@ -13,7 +19,7 @@
             <th>Supprimer</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody >
     <tr *ngFor="let p of produits">
         <td><img src={{p.imageart}} alt="" width="50" /></td>
         <td>{{p.reference}}</td>
@@ -30,4 +36,6 @@
         </button></td>
     </tr>
 </tbody>
+
 </table>
+</div>

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { Products } from '../products';
 
+
+
 @Component({
   selector: 'app-listproduits',
   templateUrl: './listproduits.component.html',
@@ -9,8 +11,15 @@ import { Products } from '../products';
 })
 export class ListproduitsComponent {
   produits:Products[]=[]
-constructor(private prserv:ProductsService){}
+
+
+constructor(private prserv:ProductsService){
+
+}
+
 ngOnInit():void{
+ 
+
 this.prserv.getallArticles().subscribe((data:Products[])=>
   this.produits=data)
 }

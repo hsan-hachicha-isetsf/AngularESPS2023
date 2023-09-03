@@ -9,6 +9,10 @@ import { EditComponent } from './edit/edit.component';
 import { ListproduitsComponent } from './listproduits/listproduits.component';
 import { FormsModule } from '@angular/forms';
 
+import { ProduitcardComponent } from './produitcard/produitcard.component';
+import { DataTablesModule } from 'angular-datatables';
+
+
 
 @NgModule({
   declarations: [
@@ -16,12 +20,17 @@ import { FormsModule } from '@angular/forms';
     ViewComponent,
     CreateComponent,
     EditComponent,
-    ListproduitsComponent
+    ListproduitsComponent,
+    ProduitcardComponent
+   
   ],
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    FormsModule
+    FormsModule,
+    DataTablesModule
+  
+   
   ]
 })
 export class ProductsModule { }
