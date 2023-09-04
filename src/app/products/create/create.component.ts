@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { Products } from '../products';
 import { Scategorie } from 'src/app/scategories/scategorie';
 import { ScategoriesService } from 'src/app/scategories/scategories.service';
@@ -11,6 +11,7 @@ import { ProductsService } from '../products.service';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
+
   products:Products=new Products()
   scategories:Scategorie[]=[]
   display = "none";
@@ -22,8 +23,7 @@ ngOnInit():void{
     this.scategories=data)
     
   }
-
-
+ 
   openModal() { 
     this.display = "block";
 }
@@ -37,7 +37,7 @@ Ajoutarticle=()=>{
    
    this.closeModal() 
    window.location.reload();
-
+  
   }))}
 
 

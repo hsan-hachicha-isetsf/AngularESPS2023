@@ -16,16 +16,22 @@ export class ListproduitsComponent {
 constructor(private prserv:ProductsService){
 
 }
+ajoutarticle=(pr:any)=>{
+this.produits.push(pr)
+}
+ngOnInit(){
+ this.loadarticles()
 
-ngOnInit():void{
- 
 
-this.prserv.getallArticles().subscribe((data:Products[])=>
+}
+loadarticles=()=>{
+  this.prserv.getallArticles().subscribe((data:Products[])=>
   this.produits=data)
 }
 delarticle(id:any){
   this.prserv.deleteArticle(id).subscribe(res => {
     this.produits = this.produits.filter(item => item._id !== id);
 })
+window.location.reload();
 }
 }

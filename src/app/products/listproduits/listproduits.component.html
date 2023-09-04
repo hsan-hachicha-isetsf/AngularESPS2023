@@ -4,7 +4,7 @@
     
    
 
-<app-create></app-create>
+<app-create ></app-create>
 <div>
     <table datatable *ngIf="produits.length !=0"   class="table table-striped table-bordered table-sm row-border hover">
     <thead>
@@ -27,9 +27,11 @@
         <td>{{p.qtestock}}</td>
         <td>{{p.prix}}</td>
 
-        <td><button type="button" class="btn btn-info">
-            <i class="bi bi-pencil-square" ></i>
-        </button></td>
+        <td>
+            
+            <app-edit [productId]="p._id"  ></app-edit>
+        </td>
+       
         <td><button type="button" class="btn btn-danger" (click)="delarticle(p._id)">
             <i class="bi bi-trash3"></i>
 
